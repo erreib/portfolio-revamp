@@ -1,0 +1,36 @@
+.tagContainer {
+  flex-direction: row;
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  position: relative;
+  border-radius: 11.07px;
+  padding: 3px 8px;
+  border-width: 1px;
+  border-style: solid;
+}
+.tagContainer > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: calc(0px - 10px);
+  width: calc(100% + 10px);
+}
+.tagContainer > :global(.__wab_flex-container) > *,
+.tagContainer > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.tagContainer > :global(.__wab_flex-container) > picture > img,
+.tagContainer
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 10px;
+}
+.slotTargetTagText {
+  font-family: "Inter", sans-serif;
+  font-size: 11.07px;
+  font-weight: 400;
+  color: rgba(74, 74, 74, 1);
+  line-height: 1.3652199999999999;
+  letter-spacing: 0em;
+}

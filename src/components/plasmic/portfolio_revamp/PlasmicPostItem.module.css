@@ -1,0 +1,194 @@
+.postContainer {
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  position: relative;
+  cursor: pointer;
+}
+.postContainer > :global(.__wab_flex-container) {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: calc(0px - 10px);
+  height: calc(100% + 10px);
+}
+.postContainer > :global(.__wab_flex-container) > *,
+.postContainer > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.postContainer > :global(.__wab_flex-container) > picture > img,
+.postContainer
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 10px;
+}
+.postTitleInfo {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.freeBox {
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  transform: translateX(-23px) translateY(0px) translateZ(0px);
+  transition-property: transform;
+  transition-duration: 0.2s;
+  min-width: 0;
+  -webkit-transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+}
+.freeBox > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  margin-left: calc(0px - 7px);
+  width: calc(100% + 7px);
+}
+.freeBox > :global(.__wab_flex-container) > *,
+.freeBox > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox > :global(.__wab_flex-container) > picture > img,
+.freeBox
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 7px;
+}
+.postContainer:hover .freeBox {
+  transform: none;
+}
+.svg {
+  object-fit: cover;
+  max-width: 100%;
+  color: #000;
+  width: 1em;
+  flex-shrink: 0;
+  height: 1em;
+}
+.contentfulFetcher__t1QvA:global(.__wab_instance) {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 8px;
+  grid-column-gap: 8px;
+  object-fit: cover;
+  position: relative;
+  font-size: 15px;
+  font-weight: 600;
+  color: #535353;
+}
+.freeBox___24Ahf {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.contentfulField__qPbq7:global(.__wab_instance) {
+  object-fit: cover;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2b2b2b;
+  margin-right: 4px;
+}
+.freeBox__oNwQ2 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.text__o9I6P {
+  font-size: 15px;
+  color: #515151;
+  margin-right: 4px;
+}
+.contentfulField__io4K:global(.__wab_instance) {
+  object-fit: cover;
+  font-size: 15px;
+  color: #515151;
+}
+.text__uZ0QO {
+  position: relative;
+  font-size: 15px;
+  color: #515151;
+  margin-right: 4px;
+}
+.freeBox__pt0Z {
+  flex-direction: row;
+  background: rgba(32, 32, 32, 1);
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  border-radius: 4.069px;
+  padding: 2px 4px;
+}
+.freeBox__pt0Z > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: calc(0px - 10px);
+  width: calc(100% + 10px);
+}
+.freeBox__pt0Z > :global(.__wab_flex-container) > *,
+.freeBox__pt0Z > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__pt0Z > :global(.__wab_flex-container) > picture > img,
+.freeBox__pt0Z
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 10px;
+}
+.contentfulField__ePmu5:global(.__wab_instance) {
+  object-fit: cover;
+  font-size: 11.4px;
+  color: #ffffff;
+  max-width: 100%;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.postTagContainer {
+  flex-direction: row;
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+}
+.postTagContainer > :global(.__wab_flex-container) {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-left: calc(0px - 9px);
+  width: calc(100% + 9px);
+  margin-top: calc(0px - 7px);
+  height: calc(100% + 7px);
+}
+.postTagContainer > :global(.__wab_flex-container) > *,
+.postTagContainer > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.postTagContainer > :global(.__wab_flex-container) > picture > img,
+.postTagContainer
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 9px;
+  margin-top: 7px;
+}
+.tag:global(.__wab_instance) {
+  position: relative;
+}
+.text {
+  color: #4a4a4a;
+}

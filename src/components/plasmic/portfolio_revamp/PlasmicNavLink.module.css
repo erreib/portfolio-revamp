@@ -1,0 +1,15 @@
+.root {
+  display: block;
+  font-size: 17px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(32, 32, 32, 1);
+  position: relative;
+}
+@media (max-width: 500px) {
+  .root {
+    font-size: 15px;
+  }
+}
