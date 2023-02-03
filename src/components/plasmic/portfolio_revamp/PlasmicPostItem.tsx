@@ -62,7 +62,6 @@ export type PlasmicPostItem__OverridesType = {
   svg?: p.Flex<"svg">;
   postTagContainer?: p.Flex<"div">;
   tag?: p.Flex<typeof Tag>;
-  text?: p.Flex<"div">;
 };
 
 export interface DefaultPostItemProps {
@@ -254,19 +253,6 @@ function PlasmicPostItem__RenderFunc(props: {
             data-plasmic-override={overrides.tag}
             className={classNames("__wab_instance", sty.tag)}
             key={currentIndex}
-            tagText={
-              <div
-                data-plasmic-name={"text"}
-                data-plasmic-override={overrides.text}
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text
-                )}
-              >
-                {"Development"}
-              </div>
-            }
           />
         ))}
       </p.Stack>
@@ -281,15 +267,13 @@ const PlasmicDescendants = {
     "freeBox",
     "svg",
     "postTagContainer",
-    "tag",
-    "text"
+    "tag"
   ],
   postTitleInfo: ["postTitleInfo", "freeBox", "svg"],
   freeBox: ["freeBox", "svg"],
   svg: ["svg"],
-  postTagContainer: ["postTagContainer", "tag", "text"],
-  tag: ["tag", "text"],
-  text: ["text"]
+  postTagContainer: ["postTagContainer", "tag"],
+  tag: ["tag"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -301,7 +285,6 @@ type NodeDefaultElementType = {
   svg: "svg";
   postTagContainer: "div";
   tag: typeof Tag;
-  text: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -370,7 +353,6 @@ export const PlasmicPostItem = Object.assign(
     svg: makeNodeComponent("svg"),
     postTagContainer: makeNodeComponent("postTagContainer"),
     tag: makeNodeComponent("tag"),
-    text: makeNodeComponent("text"),
 
     // Metadata about props expected for PlasmicPostItem
     internalVariantProps: PlasmicPostItem__VariantProps,

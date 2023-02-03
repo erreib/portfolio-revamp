@@ -15,7 +15,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@plasmicapp/cli": "^0.1.199",
+    "@plasmicapp/cli": "^0.1.206",
     "@plasmicapp/host": "^1.0.95",
     "@plasmicapp/react-web": "^0.2.144",
     "@plasmicpkgs/plasmic-contentful": "^0.0.50",

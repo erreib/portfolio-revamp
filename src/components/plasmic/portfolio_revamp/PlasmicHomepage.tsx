@@ -33,6 +33,10 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
+import LandingBannerAnimated from "../../LandingBannerAnimated"; // plasmic-import: PvD0-TnnhU/component
+import { ContentfulFetcher } from "@plasmicpkgs/plasmic-contentful"; // plasmic-import: 2evg2Dug_px/codeComponent
+import { ContentfulField } from "@plasmicpkgs/plasmic-contentful"; // plasmic-import: XJVyShAqlB9/codeComponent
+import PostItem from "../../PostItem"; // plasmic-import: _u_Efw8ed7/component
 import PostGroup from "../../PostGroup"; // plasmic-import: 7uOT7ub377V/component
 
 import { useScreenVariants as useScreenVariantsacMvPt7MOxbgb } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: AcMvPt7MOxbgb/globalVariant
@@ -42,31 +46,46 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import * as projectcss from "./plasmic_portfolio_revamp.module.css"; // plasmic-import: pPMwtDeJqhjkevukr6y1tF/projectcss
 import * as sty from "./PlasmicHomepage.module.css"; // plasmic-import: WiRkh1DPRNs4/css
 
-import imageT9Tp7XQjv from "./images/image.svg"; // plasmic-import: t9tp7xQjv/picture
-
 export type PlasmicHomepage__VariantMembers = {};
 export type PlasmicHomepage__VariantsArgs = {};
 type VariantPropType = keyof PlasmicHomepage__VariantsArgs;
 export const PlasmicHomepage__VariantProps = new Array<VariantPropType>();
 
-export type PlasmicHomepage__ArgsType = {};
+export type PlasmicHomepage__ArgsType = {
+  children?: React.ReactNode;
+  children2?: React.ReactNode;
+};
 type ArgPropType = keyof PlasmicHomepage__ArgsType;
-export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
+export const PlasmicHomepage__ArgProps = new Array<ArgPropType>(
+  "children",
+  "children2"
+);
 
 export type PlasmicHomepage__OverridesType = {
   root?: p.Flex<"div">;
   body?: p.Flex<"div">;
   siteNav?: p.Flex<"div">;
   frame21?: p.Flex<"div">;
-  pageBanner?: p.Flex<"div">;
-  group17?: p.Flex<"div">;
-  img?: p.Flex<typeof p.PlasmicImg>;
+  landingBannerAnimated?: p.Flex<typeof LandingBannerAnimated>;
   landingContent?: p.Flex<"div">;
   workPosts?: p.Flex<"div">;
+  postTitleContainer2?: p.Flex<"div">;
+  postTitleInnerContainer2?: p.Flex<"div">;
+  projectTypeContainer3?: p.Flex<"div">;
+  tagContainer?: p.Flex<"div">;
+  postGroupOuterContainer?: p.Flex<"div">;
+  postGroupInnerContainer?: p.Flex<"div">;
+  postTitleContainer?: p.Flex<"div">;
+  postTitleInnerContainer?: p.Flex<"div">;
+  postNavContainer?: p.Flex<"div">;
+  postItem?: p.Flex<typeof PostItem>;
+  projectTypeContainer2?: p.Flex<"div">;
   blogPosts?: p.Flex<"div">;
 };
 
 export interface DefaultHomepageProps {
+  children?: React.ReactNode;
+  children2?: React.ReactNode;
   className?: string;
 }
 
@@ -220,51 +239,14 @@ function PlasmicHomepage__RenderFunc(props: {
               </p.Stack>
             </div>
 
-            <p.Stack
-              as={"div"}
-              data-plasmic-name={"pageBanner"}
-              data-plasmic-override={overrides.pageBanner}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.pageBanner)}
-            >
-              <div
-                data-plasmic-name={"group17"}
-                data-plasmic-override={overrides.group17}
-                className={classNames(projectcss.all, sty.group17)}
-              >
-                <p.PlasmicImg
-                  data-plasmic-name={"img"}
-                  data-plasmic-override={overrides.img}
-                  alt={""}
-                  className={classNames(sty.img)}
-                  displayHeight={"100%" as const}
-                  displayMaxHeight={"none" as const}
-                  displayMaxWidth={"none" as const}
-                  displayMinHeight={"0" as const}
-                  displayMinWidth={"0" as const}
-                  displayWidth={"100%" as const}
-                  loading={"lazy" as const}
-                  src={{
-                    src: imageT9Tp7XQjv,
-                    fullWidth: 285,
-                    fullHeight: 150,
-                    aspectRatio: 1.901587
-                  }}
-                />
-              </div>
-
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__ny51Z
-                )}
-              >
-                {
-                  "Erik Reiblein is a user experience designer who specializes in tackling projects with complex functionality requirements."
-                }
-              </div>
-            </p.Stack>
+            <LandingBannerAnimated
+              data-plasmic-name={"landingBannerAnimated"}
+              data-plasmic-override={overrides.landingBannerAnimated}
+              className={classNames(
+                "__wab_instance",
+                sty.landingBannerAnimated
+              )}
+            />
 
             {true ? (
               <div
@@ -279,6 +261,342 @@ function PlasmicHomepage__RenderFunc(props: {
                   hasGap={true}
                   className={classNames(projectcss.all, sty.workPosts)}
                 >
+                  {true ? (
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__uDiC)}
+                    >
+                      <p.Stack
+                        as={"div"}
+                        data-plasmic-name={"postTitleContainer2"}
+                        data-plasmic-override={overrides.postTitleContainer2}
+                        hasGap={true}
+                        className={classNames(
+                          projectcss.all,
+                          sty.postTitleContainer2
+                        )}
+                      >
+                        <div
+                          data-plasmic-name={"postTitleInnerContainer2"}
+                          data-plasmic-override={
+                            overrides.postTitleInnerContainer2
+                          }
+                          className={classNames(
+                            projectcss.all,
+                            sty.postTitleInnerContainer2
+                          )}
+                        >
+                          {p.renderPlasmicSlot({
+                            defaultContents: "UX Design Work",
+                            value: args.children2,
+                            className: classNames(sty.slotTargetChildren2)
+                          })}
+                        </div>
+                      </p.Stack>
+
+                      <ContentfulFetcher
+                        className={classNames(
+                          "__wab_instance",
+                          sty.contentfulFetcher__pSyCg
+                        )}
+                        contentType={"blogPost" as const}
+                        limit={(() => {
+                          try {
+                            return undefined;
+                          } catch (e) {
+                            if (e instanceof TypeError) {
+                              return undefined;
+                            }
+                            throw e;
+                          }
+                        })()}
+                        noLayout={true}
+                      >
+                        <ph.DataCtxReader>
+                          {$ctx => (
+                            <React.Fragment>
+                              <p.PlasmicLink
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.a,
+                                  sty.link__iLi40
+                                )}
+                                component={Link}
+                                href={(() => {
+                                  try {
+                                    return $ctx.currentContentfulBlogPostItem
+                                      .fields.slug;
+                                  } catch (e) {
+                                    if (e instanceof TypeError) {
+                                      return `/`;
+                                    }
+                                    throw e;
+                                  }
+                                })()}
+                                platform={"gatsby"}
+                              >
+                                <ContentfulField
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.contentfulField__mt4Yv
+                                  )}
+                                  objectPath={["postTitle"]}
+                                />
+
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__pSbqM
+                                  )}
+                                >
+                                  {"(For"}
+                                </div>
+
+                                <ContentfulField
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.contentfulField___00Vn
+                                  )}
+                                  objectPath={["projectClient"]}
+                                />
+
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__lw04
+                                  )}
+                                >
+                                  {")"}
+                                </div>
+
+                                <p.Stack
+                                  as={"div"}
+                                  data-plasmic-name={"projectTypeContainer3"}
+                                  data-plasmic-override={
+                                    overrides.projectTypeContainer3
+                                  }
+                                  hasGap={true}
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.projectTypeContainer3
+                                  )}
+                                >
+                                  <ContentfulField
+                                    className={classNames(
+                                      "__wab_instance",
+                                      sty.contentfulField__eqOq8
+                                    )}
+                                    objectPath={["projectType"]}
+                                  />
+                                </p.Stack>
+                              </p.PlasmicLink>
+
+                              {true ? (
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.freeBox__yiskf
+                                  )}
+                                >
+                                  {(
+                                    (() => {
+                                      try {
+                                        return $ctx
+                                          .currentContentfulBlogPostItem.fields
+                                          .tags[0];
+                                      } catch (e) {
+                                        if (e instanceof TypeError) {
+                                          return [];
+                                        }
+                                        throw e;
+                                      }
+                                    })() ?? []
+                                  ).map((currentItem, currentIndex) => (
+                                    <p.Stack
+                                      as={"div"}
+                                      data-plasmic-name={"tagContainer"}
+                                      data-plasmic-override={
+                                        overrides.tagContainer
+                                      }
+                                      hasGap={true}
+                                      className={classNames(
+                                        projectcss.all,
+                                        sty.tagContainer
+                                      )}
+                                      key={currentIndex}
+                                    >
+                                      <div
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.__wab_text,
+                                          sty.text__sJ9Zh
+                                        )}
+                                      >
+                                        {"Ideation"}
+                                      </div>
+                                    </p.Stack>
+                                  ))}
+                                </div>
+                              ) : null}
+                            </React.Fragment>
+                          )}
+                        </ph.DataCtxReader>
+                      </ContentfulFetcher>
+                    </div>
+                  ) : null}
+
+                  <p.Stack
+                    as={"div"}
+                    data-plasmic-name={"postGroupOuterContainer"}
+                    data-plasmic-override={overrides.postGroupOuterContainer}
+                    hasGap={true}
+                    className={classNames(
+                      projectcss.all,
+                      sty.postGroupOuterContainer
+                    )}
+                  >
+                    <div
+                      data-plasmic-name={"postGroupInnerContainer"}
+                      data-plasmic-override={overrides.postGroupInnerContainer}
+                      className={classNames(
+                        projectcss.all,
+                        sty.postGroupInnerContainer
+                      )}
+                    >
+                      <p.Stack
+                        as={"div"}
+                        data-plasmic-name={"postTitleContainer"}
+                        data-plasmic-override={overrides.postTitleContainer}
+                        hasGap={true}
+                        className={classNames(
+                          projectcss.all,
+                          sty.postTitleContainer
+                        )}
+                      >
+                        <div
+                          data-plasmic-name={"postTitleInnerContainer"}
+                          data-plasmic-override={
+                            overrides.postTitleInnerContainer
+                          }
+                          className={classNames(
+                            projectcss.all,
+                            sty.postTitleInnerContainer
+                          )}
+                        >
+                          {p.renderPlasmicSlot({
+                            defaultContents: "UX Design Work",
+                            value: args.children,
+                            className: classNames(sty.slotTargetChildren)
+                          })}
+                        </div>
+                      </p.Stack>
+
+                      <p.Stack
+                        as={"div"}
+                        data-plasmic-name={"postNavContainer"}
+                        data-plasmic-override={overrides.postNavContainer}
+                        hasGap={true}
+                        className={classNames(
+                          projectcss.all,
+                          sty.postNavContainer
+                        )}
+                      >
+                        <PostItem
+                          data-plasmic-name={"postItem"}
+                          data-plasmic-override={overrides.postItem}
+                          className={classNames("__wab_instance", sty.postItem)}
+                        >
+                          <ContentfulFetcher
+                            className={classNames(
+                              "__wab_instance",
+                              sty.contentfulFetcher__yp5F
+                            )}
+                            contentType={"blogPost" as const}
+                            entryID={"3uswRihQ79kxmUvNokovFO" as const}
+                            limit={undefined}
+                            noLayout={true}
+                          >
+                            <ph.DataCtxReader>
+                              {$ctx => (
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.freeBox__xF52S
+                                  )}
+                                >
+                                  <ContentfulField
+                                    className={classNames(
+                                      "__wab_instance",
+                                      sty.contentfulField__hd1Pn
+                                    )}
+                                    objectPath={["postTitle"]}
+                                  />
+
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      sty.freeBox__gZs6B
+                                    )}
+                                  >
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__jq0A0
+                                      )}
+                                    >
+                                      {"(For"}
+                                    </div>
+
+                                    <ContentfulField
+                                      className={classNames(
+                                        "__wab_instance",
+                                        sty.contentfulField__hr5BC
+                                      )}
+                                      objectPath={["projectClient"]}
+                                    />
+
+                                    <div
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.__wab_text,
+                                        sty.text__albfV
+                                      )}
+                                    >
+                                      {")"}
+                                    </div>
+                                  </div>
+
+                                  <p.Stack
+                                    as={"div"}
+                                    data-plasmic-name={"projectTypeContainer2"}
+                                    data-plasmic-override={
+                                      overrides.projectTypeContainer2
+                                    }
+                                    hasGap={true}
+                                    className={classNames(
+                                      projectcss.all,
+                                      sty.projectTypeContainer2
+                                    )}
+                                  >
+                                    <ContentfulField
+                                      className={classNames(
+                                        "__wab_instance",
+                                        sty.contentfulField__ptrwa
+                                      )}
+                                      objectPath={["projectType"]}
+                                    />
+                                  </p.Stack>
+                                </div>
+                              )}
+                            </ph.DataCtxReader>
+                          </ContentfulFetcher>
+                        </PostItem>
+                      </p.Stack>
+                    </div>
+                  </p.Stack>
+
                   <PostGroup
                     className={classNames(
                       "__wab_instance",
@@ -300,10 +618,10 @@ function PlasmicHomepage__RenderFunc(props: {
                   <PostGroup
                     className={classNames(
                       "__wab_instance",
-                      sty.postGroup__wr2B
+                      sty.postGroup__xsSxv
                     )}
                   >
-                    {"Student Projects"}
+                    {"Student Work"}
                   </PostGroup>
                 </p.Stack>
 
@@ -338,31 +656,101 @@ const PlasmicDescendants = {
     "body",
     "siteNav",
     "frame21",
-    "pageBanner",
-    "group17",
-    "img",
+    "landingBannerAnimated",
     "landingContent",
     "workPosts",
+    "postTitleContainer2",
+    "postTitleInnerContainer2",
+    "projectTypeContainer3",
+    "tagContainer",
+    "postGroupOuterContainer",
+    "postGroupInnerContainer",
+    "postTitleContainer",
+    "postTitleInnerContainer",
+    "postNavContainer",
+    "postItem",
+    "projectTypeContainer2",
     "blogPosts"
   ],
   body: [
     "body",
     "siteNav",
     "frame21",
-    "pageBanner",
-    "group17",
-    "img",
+    "landingBannerAnimated",
     "landingContent",
     "workPosts",
+    "postTitleContainer2",
+    "postTitleInnerContainer2",
+    "projectTypeContainer3",
+    "tagContainer",
+    "postGroupOuterContainer",
+    "postGroupInnerContainer",
+    "postTitleContainer",
+    "postTitleInnerContainer",
+    "postNavContainer",
+    "postItem",
+    "projectTypeContainer2",
     "blogPosts"
   ],
   siteNav: ["siteNav", "frame21"],
   frame21: ["frame21"],
-  pageBanner: ["pageBanner", "group17", "img"],
-  group17: ["group17", "img"],
-  img: ["img"],
-  landingContent: ["landingContent", "workPosts", "blogPosts"],
-  workPosts: ["workPosts"],
+  landingBannerAnimated: ["landingBannerAnimated"],
+  landingContent: [
+    "landingContent",
+    "workPosts",
+    "postTitleContainer2",
+    "postTitleInnerContainer2",
+    "projectTypeContainer3",
+    "tagContainer",
+    "postGroupOuterContainer",
+    "postGroupInnerContainer",
+    "postTitleContainer",
+    "postTitleInnerContainer",
+    "postNavContainer",
+    "postItem",
+    "projectTypeContainer2",
+    "blogPosts"
+  ],
+  workPosts: [
+    "workPosts",
+    "postTitleContainer2",
+    "postTitleInnerContainer2",
+    "projectTypeContainer3",
+    "tagContainer",
+    "postGroupOuterContainer",
+    "postGroupInnerContainer",
+    "postTitleContainer",
+    "postTitleInnerContainer",
+    "postNavContainer",
+    "postItem",
+    "projectTypeContainer2"
+  ],
+  postTitleContainer2: ["postTitleContainer2", "postTitleInnerContainer2"],
+  postTitleInnerContainer2: ["postTitleInnerContainer2"],
+  projectTypeContainer3: ["projectTypeContainer3"],
+  tagContainer: ["tagContainer"],
+  postGroupOuterContainer: [
+    "postGroupOuterContainer",
+    "postGroupInnerContainer",
+    "postTitleContainer",
+    "postTitleInnerContainer",
+    "postNavContainer",
+    "postItem",
+    "projectTypeContainer2"
+  ],
+  postGroupInnerContainer: [
+    "postGroupInnerContainer",
+    "postTitleContainer",
+    "postTitleInnerContainer",
+    "postNavContainer",
+    "postItem",
+    "projectTypeContainer2"
+  ],
+  postTitleContainer: ["postTitleContainer", "postTitleInnerContainer"],
+  postTitleInnerContainer: ["postTitleInnerContainer"],
+  postNavContainer: ["postNavContainer", "postItem", "projectTypeContainer2"],
+  postItem: ["postItem", "projectTypeContainer2"],
+  projectTypeContainer2: ["projectTypeContainer2"],
   blogPosts: ["blogPosts"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -373,11 +761,20 @@ type NodeDefaultElementType = {
   body: "div";
   siteNav: "div";
   frame21: "div";
-  pageBanner: "div";
-  group17: "div";
-  img: typeof p.PlasmicImg;
+  landingBannerAnimated: typeof LandingBannerAnimated;
   landingContent: "div";
   workPosts: "div";
+  postTitleContainer2: "div";
+  postTitleInnerContainer2: "div";
+  projectTypeContainer3: "div";
+  tagContainer: "div";
+  postGroupOuterContainer: "div";
+  postGroupInnerContainer: "div";
+  postTitleContainer: "div";
+  postTitleInnerContainer: "div";
+  postNavContainer: "div";
+  postItem: typeof PostItem;
+  projectTypeContainer2: "div";
   blogPosts: "div";
 };
 
@@ -445,11 +842,20 @@ export const PlasmicHomepage = Object.assign(
     body: makeNodeComponent("body"),
     siteNav: makeNodeComponent("siteNav"),
     frame21: makeNodeComponent("frame21"),
-    pageBanner: makeNodeComponent("pageBanner"),
-    group17: makeNodeComponent("group17"),
-    img: makeNodeComponent("img"),
+    landingBannerAnimated: makeNodeComponent("landingBannerAnimated"),
     landingContent: makeNodeComponent("landingContent"),
     workPosts: makeNodeComponent("workPosts"),
+    postTitleContainer2: makeNodeComponent("postTitleContainer2"),
+    postTitleInnerContainer2: makeNodeComponent("postTitleInnerContainer2"),
+    projectTypeContainer3: makeNodeComponent("projectTypeContainer3"),
+    tagContainer: makeNodeComponent("tagContainer"),
+    postGroupOuterContainer: makeNodeComponent("postGroupOuterContainer"),
+    postGroupInnerContainer: makeNodeComponent("postGroupInnerContainer"),
+    postTitleContainer: makeNodeComponent("postTitleContainer"),
+    postTitleInnerContainer: makeNodeComponent("postTitleInnerContainer"),
+    postNavContainer: makeNodeComponent("postNavContainer"),
+    postItem: makeNodeComponent("postItem"),
+    projectTypeContainer2: makeNodeComponent("projectTypeContainer2"),
     blogPosts: makeNodeComponent("blogPosts"),
 
     // Metadata about props expected for PlasmicHomepage

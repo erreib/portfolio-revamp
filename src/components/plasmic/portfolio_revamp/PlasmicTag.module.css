@@ -6,8 +6,7 @@
   position: relative;
   border-radius: 11.07px;
   padding: 3px 8px;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid currentcolor;
 }
 .tagContainer > :global(.__wab_flex-container) {
   flex-direction: row;
@@ -26,11 +25,6 @@
   > img {
   margin-left: 10px;
 }
-.slotTargetTagText {
-  font-family: "Inter", sans-serif;
-  font-size: 11.07px;
-  font-weight: 400;
-  color: rgba(74, 74, 74, 1);
-  line-height: 1.3652199999999999;
-  letter-spacing: 0em;
+.text {
+  font-size: 11px;
 }

@@ -147,88 +147,94 @@ function PlasmicPostGroup__RenderFunc(props: {
           hasGap={true}
           className={classNames(projectcss.all, sty.postNavContainer)}
         >
-          <PostItem
-            data-plasmic-name={"postItem"}
-            data-plasmic-override={overrides.postItem}
-            className={classNames("__wab_instance", sty.postItem)}
-          >
-            <ContentfulFetcher
-              data-plasmic-name={"contentfulFetcher"}
-              data-plasmic-override={overrides.contentfulFetcher}
-              className={classNames("__wab_instance", sty.contentfulFetcher)}
-              contentType={"blogPost" as const}
-              entryID={"6kP47XW91Cmtq4GHbn39lj" as const}
-              limit={1000 as const}
-              noLayout={true}
+          {([2, 3, 4] ?? []).map((currentItem, __index) => (
+            <PostItem
+              data-plasmic-name={"postItem"}
+              data-plasmic-override={overrides.postItem}
+              className={classNames("__wab_instance", sty.postItem)}
+              key={__index}
             >
-              <ph.DataCtxReader>
-                {$ctx => (
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__wRvdR)}
-                  >
-                    <ContentfulField
-                      className={classNames(
-                        "__wab_instance",
-                        sty.contentfulField__z0JRf
-                      )}
-                      objectPath={["postTitle"]}
-                    />
-
+              <ContentfulFetcher
+                data-plasmic-name={"contentfulFetcher"}
+                data-plasmic-override={overrides.contentfulFetcher}
+                className={classNames("__wab_instance", sty.contentfulFetcher)}
+                contentType={"blogPost" as const}
+                entryID={"6kP47XW91Cmtq4GHbn39lj" as const}
+                limit={1000 as const}
+                noLayout={true}
+              >
+                <ph.DataCtxReader>
+                  {$ctx => (
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__wLujd)}
+                      className={classNames(projectcss.all, sty.freeBox__wRvdR)}
                     >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__fkGe9
-                        )}
-                      >
-                        {"(For"}
-                      </div>
-
                       <ContentfulField
                         className={classNames(
                           "__wab_instance",
-                          sty.contentfulField__pG80I
+                          sty.contentfulField__z0JRf
                         )}
-                        objectPath={["projectClient"]}
+                        objectPath={["postTitle"]}
                       />
 
                       <div
                         className={classNames(
                           projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__wfB1C
+                          sty.freeBox__wLujd
                         )}
                       >
-                        {")"}
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__fkGe9
+                          )}
+                        >
+                          {"(For"}
+                        </div>
+
+                        <ContentfulField
+                          className={classNames(
+                            "__wab_instance",
+                            sty.contentfulField__pG80I
+                          )}
+                          objectPath={["projectClient"]}
+                        />
+
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__wfB1C
+                          )}
+                        >
+                          {")"}
+                        </div>
                       </div>
+
+                      <p.Stack
+                        as={"div"}
+                        data-plasmic-name={"projectTypeContainer2"}
+                        data-plasmic-override={overrides.projectTypeContainer2}
+                        hasGap={true}
+                        className={classNames(
+                          projectcss.all,
+                          sty.projectTypeContainer2
+                        )}
+                      >
+                        <ContentfulField
+                          className={classNames(
+                            "__wab_instance",
+                            sty.contentfulField__ofX1E
+                          )}
+                          objectPath={["projectType"]}
+                        />
+                      </p.Stack>
                     </div>
-
-                    <p.Stack
-                      as={"div"}
-                      data-plasmic-name={"projectTypeContainer2"}
-                      data-plasmic-override={overrides.projectTypeContainer2}
-                      hasGap={true}
-                      className={classNames(
-                        projectcss.all,
-                        sty.projectTypeContainer2
-                      )}
-                    >
-                      <ContentfulField
-                        className={classNames(
-                          "__wab_instance",
-                          sty.contentfulField__ofX1E
-                        )}
-                        objectPath={["projectType"]}
-                      />
-                    </p.Stack>
-                  </div>
-                )}
-              </ph.DataCtxReader>
-            </ContentfulFetcher>
-          </PostItem>
+                  )}
+                </ph.DataCtxReader>
+              </ContentfulFetcher>
+            </PostItem>
+          ))}
         </p.Stack>
       </div>
     </p.Stack>

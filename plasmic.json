@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "files",
@@ -48,7 +48,8 @@
           "name": "ContentfulCredentialsProvider",
           "componentImportPath": "@plasmicpkgs/plasmic-contentful"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     },
     {
       "projectId": "pPMwtDeJqhjkevukr6y1tF",
@@ -134,6 +135,19 @@
           "cssFilePath": "plasmic/portfolio_revamp/PlasmicPostPage.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "PvD0-TnnhU",
+          "name": "LandingBannerAnimated",
+          "type": "managed",
+          "projectId": "pPMwtDeJqhjkevukr6y1tF",
+          "renderModuleFilePath": "plasmic/portfolio_revamp/PlasmicLandingBannerAnimated.tsx",
+          "importSpec": {
+            "modulePath": "LandingBannerAnimated.tsx"
+          },
+          "cssFilePath": "plasmic/portfolio_revamp/PlasmicLandingBannerAnimated.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -245,6 +259,6 @@
   "gatsbyConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.199",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.199/dist/plasmic.schema.json"
+  "cliVersion": "0.1.206",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.206/dist/plasmic.schema.json"
 }
