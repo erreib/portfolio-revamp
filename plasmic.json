@@ -266,7 +266,8 @@
           "name": "EmbedCss",
           "componentImportPath": "@plasmicpkgs/plasmic-embed-css"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     },
     {
       "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
@@ -300,7 +301,8 @@
           "name": "DataProvider",
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {
