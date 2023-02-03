@@ -33,6 +33,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
+import { Embed } from "@plasmicpkgs/plasmic-basic-components"; // plasmic-import: PKldDYkH42/codeComponent
 
 import { useScreenVariants as useScreenVariantsacMvPt7MOxbgb } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: AcMvPt7MOxbgb/globalVariant
 
@@ -40,8 +41,6 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 
 import * as projectcss from "./plasmic_portfolio_revamp.module.css"; // plasmic-import: pPMwtDeJqhjkevukr6y1tF/projectcss
 import * as sty from "./PlasmicLandingBannerAnimated.module.css"; // plasmic-import: PvD0-TnnhU/css
-
-import imageT9Tp7XQjv from "./images/image.svg"; // plasmic-import: t9tp7xQjv/picture
 
 export type PlasmicLandingBannerAnimated__VariantMembers = {};
 export type PlasmicLandingBannerAnimated__VariantsArgs = {};
@@ -56,7 +55,7 @@ export const PlasmicLandingBannerAnimated__ArgProps = new Array<ArgPropType>();
 export type PlasmicLandingBannerAnimated__OverridesType = {
   pageBanner?: p.Flex<"div">;
   group17?: p.Flex<"div">;
-  img?: p.Flex<typeof p.PlasmicImg>;
+  embedHtml?: p.Flex<typeof Embed>;
   text?: p.Flex<"div">;
 };
 
@@ -119,24 +118,13 @@ function PlasmicLandingBannerAnimated__RenderFunc(props: {
         data-plasmic-override={overrides.group17}
         className={classNames(projectcss.all, sty.group17)}
       >
-        <p.PlasmicImg
-          data-plasmic-name={"img"}
-          data-plasmic-override={overrides.img}
-          alt={""}
-          className={classNames(sty.img)}
-          displayHeight={"100%" as const}
-          displayMaxHeight={"none" as const}
-          displayMaxWidth={"none" as const}
-          displayMinHeight={"0" as const}
-          displayMinWidth={"0" as const}
-          displayWidth={"100%" as const}
-          loading={"lazy" as const}
-          src={{
-            src: imageT9Tp7XQjv,
-            fullWidth: 285,
-            fullHeight: 150,
-            aspectRatio: 1.901587
-          }}
+        <Embed
+          data-plasmic-name={"embedHtml"}
+          data-plasmic-override={overrides.embedHtml}
+          className={classNames("__wab_instance", sty.embedHtml)}
+          code={
+            '<svg viewBox="0 0 235 278" fill="none" xmlns="http://www.w3.org/2000/svg">\r\n<rect y="72.1232" width="140.224" height="226.122" rx="44.8939" transform="rotate(-24.7075 0 72.1232)" fill="#C4C0C0"/>\r\n<rect x="12.2065" y="58.9779" width="140.224" height="226.122" rx="44.8939" transform="rotate(-24.7075 12.2065 58.9779)" fill="#D9D9D9"/>\r\n<rect class="banner-ani-rect rec1" x="39.28" y="76.6851" width="106.291" height="27.5194" rx="13.7597" transform="rotate(-24.7075 39.28 76.6851)" />\r\n<rect class="banner-ani-rect rec2" x="59.8585" y="116.292" width="106.291" height="27.5194" rx="13.7597" transform="rotate(-24.7075 59.8585 116.292)"/>\r\n<rect class="banner-ani-rect rec3" x="81.4742" y="161.186" width="106.291" height="27.5194" rx="13.7597" transform="rotate(-24.7075 81.4742 161.186)"/>\r\n<rect class="banner-ani-rect rec4" x="105.584" y="206.08" width="106.291" height="27.5194" rx="13.7597" transform="rotate(-24.7075 105.584 206.08)"/>\r\n</svg>\r\n' as const
+          }
         />
       </div>
 
@@ -154,9 +142,9 @@ function PlasmicLandingBannerAnimated__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  pageBanner: ["pageBanner", "group17", "img", "text"],
-  group17: ["group17", "img"],
-  img: ["img"],
+  pageBanner: ["pageBanner", "group17", "embedHtml", "text"],
+  group17: ["group17", "embedHtml"],
+  embedHtml: ["embedHtml"],
   text: ["text"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -165,7 +153,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   pageBanner: "div";
   group17: "div";
-  img: typeof p.PlasmicImg;
+  embedHtml: typeof Embed;
   text: "div";
 };
 
@@ -231,7 +219,7 @@ export const PlasmicLandingBannerAnimated = Object.assign(
   {
     // Helper components rendering sub-elements
     group17: makeNodeComponent("group17"),
-    img: makeNodeComponent("img"),
+    embedHtml: makeNodeComponent("embedHtml"),
     text: makeNodeComponent("text"),
 
     // Metadata about props expected for PlasmicLandingBannerAnimated
