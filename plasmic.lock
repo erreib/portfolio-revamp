@@ -24,8 +24,7 @@
       "version": "latest",
       "dependencies": {
         "xfguyo8p9zs8FxMdioQAoN": "0.10.0",
-        "caTPwKxj5ZrD9LQ7DMdK4Z": "3.11.0",
-        "8PtdGodUbexNYgkuyBUcWu": "3.8.0"
+        "caTPwKxj5ZrD9LQ7DMdK4Z": "3.11.0"
       },
       "lang": "ts",
       "fileLocks": [
@@ -36,7 +35,7 @@
         },
         {
           "assetId": "pPMwtDeJqhjkevukr6y1tF",
-          "checksum": "188afacb00c936d7ab351c0bee4592b1",
+          "checksum": "4e4c9b4be89a46b8e33da0eceeecc4ff",
           "type": "globalContexts"
         },
         {

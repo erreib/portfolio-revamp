@@ -6,23 +6,18 @@
 import * as React from "react";
 import { hasVariant, ensureGlobalVariants } from "@plasmicapp/react-web";
 import { ContentfulCredentialsProvider } from "@plasmicpkgs/plasmic-contentful"; // plasmic-import: lXSCSEWn2xb/codeComponent
-import { EmbedCss } from "@plasmicpkgs/plasmic-embed-css"; // plasmic-import: qF0uJxFztB/codeComponent
 
 export interface GlobalContextsProviderProps {
   children?: React.ReactElement;
   contentfulCredentialsProviderProps?: Partial<
     Omit<React.ComponentProps<typeof ContentfulCredentialsProvider>, "children">
   >;
-
-  embedCssProps?: Partial<
-    Omit<React.ComponentProps<typeof EmbedCss>, "children">
-  >;
 }
 
 export default function GlobalContextsProvider(
   props: GlobalContextsProviderProps
 ) {
-  const { children, contentfulCredentialsProviderProps, embedCssProps } = props;
+  const { children, contentfulCredentialsProviderProps } = props;
 
   return (
     <ContentfulCredentialsProvider
@@ -46,16 +41,7 @@ export default function GlobalContextsProvider(
           : ("xofpvkk2kowr" as const)
       }
     >
-      <EmbedCss
-        {...embedCssProps}
-        css={
-          embedCssProps && "css" in embedCssProps
-            ? embedCssProps.css!
-            : ("/* .banner-ani-rect {\r\n    transition: fill .2s ease;\r\n} */\r\n\r\n.rec1 {\r\n    animation: rec1-color-change 10s infinite;\r\n    /* fill: #FF604D; */\r\n}\r\n\r\n@keyframes rec1-color-change {\r\n    0% {fill: #FF604D};\r\n    100% {fill: #FF604D};\r\n}\r\n\r\n\r\n" as const)
-        }
-      >
-        {children}
-      </EmbedCss>
+      {children}
     </ContentfulCredentialsProvider>
   );
 }
